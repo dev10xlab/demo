@@ -1,8 +1,18 @@
 <?php
 
-use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use App\Models\User;
+use App\Models\Order;
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote');
+
+Artisan::command('create:user', function () {
+
+    User::create(['name'=>'Andrubale','email'=>'adrubale@gmail.com','password'=>'prova']);
+
+});
+
+Artisan::command('create:order', function () {
+
+    Order::create();
+
+});
